@@ -1,5 +1,4 @@
 library(dunn.test)
-library(fifer)
 
 source("./filterUI.R")
 
