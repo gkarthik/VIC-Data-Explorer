@@ -17,8 +17,9 @@ shinyUI(fluidPage(
         plotlyOutput("trendPlot"),
         htmlOutput("detailsText")
     ),
+    ),
     hr(),
-    tags$div(class = "header", checked = NA,
-             tags$a(href = "https://andersen-lab.com/", "Andersen Lab", style="align:right;")
-)
-));
+    tags$div(class = "fotter", style="text-align:right;", checked = NA,
+             tags$a(href = "https://andersen-lab.com/", "Andersen Lab")
+             )
+    );
