@@ -18,7 +18,7 @@ shinyUI(fluidPage(
         htmlOutput("detailsText")
     ),
     hr(),
-    tags$div(class = "footer", style="text-align:right;", checked = NA,
+    tags$footer(class = "footer", style="text-align:right;", checked = NA,
              tags$a(href = "https://andersen-lab.com/", "Andersen Lab")
              )
     )
