@@ -3,7 +3,7 @@ library(plotly)
 
 shinyUI(fluidPage(
     headerPanel("VIC Data Explorer"),
-    tags$div(style="text-align:right;", tags$a(href="https://andersen-lab.com/", "Andersen Lab"), tags$a(href="https://vhfimmunotherapy.org/", "VIC")),
+    tags$div(class="header", style="text-align:right;", checked=NA, tags$a(href="https://andersen-lab.com/", "Andersen Lab"), tags$a(href="https://vhfimmunotherapy.org/", "VIC")),
     sidebarPanel(
         selectInput('x', 'X', choices = names(subl), selected = "Protection"),
         selectInput('y', 'Y', choices = names(subl), selected = "Neut_micro"),
