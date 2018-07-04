@@ -2,8 +2,11 @@ library(shiny)
 library(plotly)
 
 shinyUI(fluidPage(
-    headerPanel("VIC Data Explorer"),
-    tags$div(class="header", style="text-align:right;", checked=NA, tags$a(href="https://andersen-lab.com/", "Andersen Lab"), tags$a(href="https://vhfimmunotherapy.org/", "VIC")),
+    titlePanel("VIC Data Explorer", "VIC Data Explorer"),
+    tags$div(class = "header", style="font-size:14px;",
+             tags$a(style="position:relative;", href = "https://vhfimmunotherapy.org/", "VIC"),
+             tags$a(style="position:relative;margin-left:20px;", href = "https://andersen-lab.com/", "Andersen Lab")
+             ),
     sidebarPanel(
         selectInput('x', 'X', choices = names(subl), selected = "Protection"),
         selectInput('y', 'Y', choices = names(subl), selected = "Neut_micro"),
@@ -17,5 +20,6 @@ shinyUI(fluidPage(
     mainPanel(
         plotlyOutput("trendPlot"),
         htmlOutput("detailsText")
+    )
     )
     );
